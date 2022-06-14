@@ -41,7 +41,7 @@ import java.util.UUID;
 public class AppAuthWebView {
 
 	private IAppAuthWebViewListener mAppAuthWebViewListener;
-	private WebView mWebView;
+	public WebView mWebView;
 	private AppAuthWebViewData mAppAuthWebViewData;
 	private Context mContext;
 	private long mConnectionTimeOut;
@@ -97,7 +97,7 @@ public class AppAuthWebView {
 	}
 
 	@SuppressLint("SetJavaScriptEnabled")
-	private AppAuthWebView(Context context,
+	public AppAuthWebView(Context context,
 						   IAppAuthWebViewListener appAuthWebViewListener,
 						   WebView webView,
 						   AppAuthWebViewData appAuthWebViewData,
@@ -237,7 +237,7 @@ public class AppAuthWebView {
 		}
 	}
 
-	private class AppAuthWebViewClient extends WebViewClient {
+	public class AppAuthWebViewClient extends WebViewClient {
 
 		@Override
 		public void onPageStarted(WebView view, String url, Bitmap favicon) {
@@ -463,7 +463,7 @@ public class AppAuthWebView {
 		}
 	}
 
-	private class ChromeClient extends WebChromeClient {
+	public class ChromeClient extends WebChromeClient {
 
 		@Override
 		public void onProgressChanged(WebView view, int newProgress) {
